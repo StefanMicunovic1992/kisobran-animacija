@@ -8,7 +8,7 @@ const stop = document.querySelector('#stop');
 const left = document.querySelector('#left');
 const right = document.querySelector('#right');
 
-slikaKisobran.classList.toggle('slikaKisobran');
+slikaKisobran.style.animationPlayState = 'paused';
 inputNumberSpan.innerHTML =`speed: ${range.value}`;
 
 range.addEventListener('change',setDuration);
@@ -87,36 +87,20 @@ function setDuration(){
 
 
 start.addEventListener('click',()=>{
-    if(slikaKisobran.classList.contains('slikaKisobran')==false){
-        slikaKisobran.classList.add('slikaKisobran');
-    }
+        slikaKisobran.style.animationPlayState = 'running';
 })
 
 stop.addEventListener('click',()=>{
-    slikaKisobran.classList.remove('slikaKisobran');
-    slikaKisobran.classList.remove('slikaKisobran2');
+    slikaKisobran.style.animationPlayState = 'paused';
 })
 
 left.addEventListener('click',()=>{
-    if(slikaKisobran.classList.contains('slikaKisobran') || slikaKisobran.classList.contains('slikaKisobran2')){
-        slikaKisobran.classList.remove('slikaKisobran');
-        slikaKisobran.classList.add('slikaKisobran2');
-    }else{
-        alert(`Morate prvo da pokrenete animaciju da bi odredili smer`)
-    }
+    slikaKisobran.style.animationDirection = 'reverse';
 })
 
 right.addEventListener('click',()=>{
-    if(slikaKisobran.classList.contains('slikaKisobran') || slikaKisobran.classList.contains('slikaKisobran2')){
-        slikaKisobran.classList.remove('slikaKisobran2');
-        slikaKisobran.classList.add('slikaKisobran');
-    }else{
-        alert(`Morate prvo da pokrenete animaciju da bi odredili smer`)
-    }
+    slikaKisobran.style.animationDirection = 'normal';
 })
-
-
-
 
 
 
