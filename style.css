@@ -1,0 +1,67 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#slikaDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80vh;
+}
+#slika{
+    width: 20%;
+}
+.slikaKisobran{
+    animation-name: rotation;
+    animation-duration: 6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(359deg);}
+  }
+
+
+.slikaKisobran2{
+    animation-name: rotation2;
+    animation-duration: 6s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    
+}
+
+@keyframes rotation2 {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(359deg);}
+  }
+
+
+#komandeRange{
+    height: 10vh;
+    background-color: lightblue;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#komandeBtn{
+    background-color: lightgoldenrodyellow;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#start, #stop, #left, #right{
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
