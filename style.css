@@ -27,22 +27,6 @@
     to { transform: rotate(359deg);}
   }
 
-
-.slikaKisobran2{
-    animation-name: rotation2;
-    animation-duration: 6s;
-    animation-iteration-count:infinite;
-    animation-timing-function: linear;
-    animation-direction: reverse;
-    
-}
-
-@keyframes rotation2 {
-    from {transform: rotate(0deg);}
-    to { transform: rotate(359deg);}
-  }
-
-
 #komandeRange{
     height: 10vh;
     background-color: lightblue;
@@ -65,4 +49,9 @@
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 1.2rem;
+}
+
+button:hover{
+    background-color: #333;
+    color: white;
 }
